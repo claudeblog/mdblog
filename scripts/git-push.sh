@@ -13,6 +13,8 @@ echo "📤 Committing changes in the main repository"
 # Move to project root so git commands work correctly
 cd "$PROJECT_ROOT"
 
+git pull
+
 if [ -n "$(git status --porcelain)" ]; then
     git add .
     commit_date=$(date '+%Y-%m-%d %H:%M:%S')
